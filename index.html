@@ -1,351 +1,431 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nivarani AI - Build Smarter with AI</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DocuSmart - AI Document Analysis Tool</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
 }
 
 body{
-    background:#0b1020;
-    color:#fff;
+background:#0f172a;
+color:white;
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
 header{
-    padding:25px 0;
+padding:25px 0;
 }
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    font-size:30px;
-    font-weight:700;
+font-size:32px;
+font-weight:700;
 }
 
 .logo span{
-    color:#5eead4;
+color:#38bdf8;
 }
 
 nav ul{
-    display:flex;
-    gap:30px;
-    list-style:none;
+display:flex;
+gap:30px;
+list-style:none;
 }
 
-nav ul li a{
-    text-decoration:none;
-    color:white;
+nav ul a{
+color:white;
+text-decoration:none;
 }
 
 .btn{
-    background:#5eead4;
-    color:#000;
-    padding:12px 24px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
+background:#38bdf8;
+padding:14px 28px;
+border-radius:50px;
+color:#000;
+font-weight:600;
+text-decoration:none;
+display:inline-block;
 }
 
 .hero{
-    padding:90px 0;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
+
+padding:100px 0;
+text-align:center;
+
 }
 
-.hero-text{
-    max-width:600px;
+.hero h1{
+
+font-size:65px;
+line-height:1.2;
+
 }
 
-.hero-text h1{
-    font-size:60px;
-    line-height:1.1;
+.hero span{
+
+color:#38bdf8;
+
 }
 
-.hero-text h1 span{
-    color:#5eead4;
-}
+.hero p{
 
-.hero-text p{
-    margin-top:25px;
-    color:#cbd5e1;
-    line-height:1.8;
+max-width:700px;
+margin:30px auto;
+color:#cbd5e1;
+line-height:1.8;
+
 }
 
 .hero-buttons{
-    margin-top:35px;
+
+margin-top:40px;
+
 }
 
 .hero-buttons a{
-    margin-right:15px;
+
+margin:10px;
+
 }
 
-.secondary{
-    border:1px solid #5eead4;
-    color:#5eead4;
-    background:transparent;
-}
+.outline{
 
-.hero-card{
-    width:380px;
-    background:#111827;
-    border-radius:25px;
-    padding:30px;
-    margin-top:30px;
-    box-shadow:0 0 40px rgba(0,0,0,.4);
-}
+background:transparent;
+border:1px solid #38bdf8;
+color:#38bdf8;
 
-.hero-card h3{
-    margin-bottom:20px;
-}
-
-.card-box{
-    background:#1f2937;
-    padding:18px;
-    border-radius:15px;
-    margin-bottom:15px;
 }
 
 section{
-    padding:80px 0;
+
+padding:90px 0;
+
 }
 
-.title{
-    text-align:center;
-    font-size:42px;
-    margin-bottom:15px;
+.section-title{
+
+text-align:center;
+font-size:45px;
+margin-bottom:20px;
+
 }
 
 .subtitle{
-    text-align:center;
-    color:#cbd5e1;
-    margin-bottom:50px;
+
+text-align:center;
+color:#94a3b8;
+margin-bottom:60px;
+
 }
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
 }
 
-.feature{
-    background:#111827;
-    padding:30px;
-    border-radius:20px;
+.card{
+
+background:#111827;
+padding:35px;
+border-radius:25px;
+
 }
 
-.feature h3{
-    margin-bottom:15px;
+.card h3{
+
+margin-bottom:20px;
+
 }
 
-.feature p{
-    color:#cbd5e1;
+.card p{
+
+color:#cbd5e1;
+line-height:1.7;
+
+}
+
+.steps{
+
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+
+}
+
+.step{
+
+flex:1;
+min-width:250px;
+background:#111827;
+padding:35px;
+border-radius:25px;
+text-align:center;
+
+}
+
+.number{
+
+font-size:50px;
+font-weight:700;
+color:#38bdf8;
+
+}
+
+.pricing{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.price-card{
+
+background:#111827;
+padding:45px;
+border-radius:25px;
+text-align:center;
+
+}
+
+.price{
+
+font-size:50px;
+font-weight:700;
+margin:20px 0;
+
 }
 
 .cta{
-    text-align:center;
-    background:#111827;
-    padding:70px 30px;
-    border-radius:30px;
-}
 
-.cta h2{
-    font-size:42px;
+background:#111827;
+padding:80px;
+text-align:center;
+border-radius:30px;
+
 }
 
 .cta p{
-    margin:20px 0 40px;
-    color:#cbd5e1;
+
+margin:25px 0;
+
 }
 
 footer{
-    padding:40px;
-    text-align:center;
-    color:#94a3b8;
+
+padding:40px;
+text-align:center;
+color:#94a3b8;
+
 }
 
 @media(max-width:768px){
 
-.hero{
-text-align:center;
-}
+.hero h1{
 
-.hero-text h1{
 font-size:42px;
-}
 
-.hero-card{
-width:100%;
 }
 
 nav ul{
+
 display:none;
+
 }
 
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <div class="container">
 
 <nav>
 
 <div class="logo">
-Nivarani <span>AI</span>
+
+Docu<span>Smart</span>
+
 </div>
 
 <ul>
+
 <li><a href="#">Home</a></li>
+
 <li><a href="#">Features</a></li>
-<li><a href="#">About</a></li>
+
+<li><a href="#">Pricing</a></li>
+
 <li><a href="#">Contact</a></li>
+
 </ul>
 
-<a href="#" class="btn">Get Started</a>
+<a href="#" class="btn">
+
+Get Started
+
+</a>
 
 </nav>
 
 </div>
+
 </header>
+
 
 <section class="hero">
 
-<div class="container hero">
-
-<div class="hero-text">
+<div class="container">
 
 <h1>
-Build Smarter with <span>AI</span>
+
+Analyze Documents
+
+with <span>AI Power</span>
+
 </h1>
 
 <p>
-Nivarani AI helps users analyze documents, generate content,
-answer questions, and automate workflows with powerful AI models.
-Fast, secure, and easy to use.
+
+Upload PDFs, DOCX and text files.
+
+Get summaries, ask questions,
+
+extract key information and
+
+boost productivity instantly.
+
 </p>
 
 <div class="hero-buttons">
 
 <a href="#" class="btn">
-Try Now
+
+Try Free
+
 </a>
 
-<a href="#" class="btn secondary">
+<a href="#" class="btn outline">
+
 Learn More
+
 </a>
-
-</div>
-
-</div>
-
-<div class="hero-card">
-
-<h3>AI Features</h3>
-
-<div class="card-box">
-📄 AI Document Analysis
-</div>
-
-<div class="card-box">
-💬 Conversational AI
-</div>
-
-<div class="card-box">
-✍️ Content Generation
-</div>
-
-<div class="card-box">
-⚡ Workflow Automation
-</div>
 
 </div>
 
 </div>
 
 </section>
+
+
 
 <section>
 
 <div class="container">
 
-<h2 class="title">
+<h2 class="section-title">
+
 Powerful Features
+
 </h2>
 
 <p class="subtitle">
-Everything you need to build smarter workflows with AI.
+
+Everything you need for document intelligence.
+
 </p>
 
-<div class="features">
+<div class="grid">
 
-<div class="feature">
+<div class="card">
 
 <h3>
-📄 Document Analysis
+
+📄 Smart Summaries
+
 </h3>
 
 <p>
-Upload PDFs or documents and get summaries and insights instantly.
-</p>
 
-</div>
+Generate concise summaries from PDFs and long documents.
 
-<div class="feature">
-
-<h3>
-💬 AI Assistant
-</h3>
-
-<p>
-Ask questions and receive intelligent responses in natural language.
 </p>
 
 </div>
 
-<div class="feature">
+<div class="card">
 
 <h3>
-✍️ Content Generation
+
+❓ Ask Questions
+
 </h3>
 
 <p>
-Generate blogs, emails, posts, and business content in seconds.
+
+Chat with your documents and get instant answers.
+
 </p>
 
 </div>
 
-<div class="feature">
+<div class="card">
 
 <h3>
-⚡ Automation
+
+🔍 Extract Data
+
 </h3>
 
 <p>
-Automate repetitive tasks and improve productivity.
+
+Find key points, names, dates and important information.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+⚡ Fast Processing
+
+</h3>
+
+<p>
+
+Analyze files in seconds with modern AI technology.
+
 </p>
 
 </div>
@@ -355,6 +435,171 @@ Automate repetitive tasks and improve productivity.
 </div>
 
 </section>
+
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+
+How It Works
+
+</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">
+
+1
+
+</div>
+
+<h3>
+
+Upload
+
+</h3>
+
+<p>
+
+Upload PDF, DOCX or TXT file.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="number">
+
+2
+
+</div>
+
+<h3>
+
+Analyze
+
+</h3>
+
+<p>
+
+AI reads and understands your document.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="number">
+
+3
+
+</div>
+
+<h3>
+
+Get Results
+
+</h3>
+
+<p>
+
+Receive summaries and insights instantly.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+
+Simple Pricing
+
+</h2>
+
+<div class="pricing">
+
+<div class="price-card">
+
+<h3>
+
+Free
+
+</h3>
+
+<div class="price">
+
+$0
+
+</div>
+
+<p>
+
+10 Documents / Month
+
+</p>
+
+<br>
+
+<a href="#" class="btn">
+
+Start Free
+
+</a>
+
+</div>
+
+<div class="price-card">
+
+<h3>
+
+Pro
+
+</h3>
+
+<div class="price">
+
+$9
+
+</div>
+
+<p>
+
+Unlimited Documents
+
+</p>
+
+<br>
+
+<a href="#" class="btn">
+
+Upgrade
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 
 <section>
 
@@ -363,15 +608,21 @@ Automate repetitive tasks and improve productivity.
 <div class="cta">
 
 <h2>
-Ready to Experience AI?
+
+Ready to Transform Documents?
+
 </h2>
 
 <p>
-Join the future of AI-powered productivity and automation.
+
+Join thousands of users using DocuSmart.
+
 </p>
 
 <a href="#" class="btn">
+
 Get Started Today
+
 </a>
 
 </div>
@@ -380,15 +631,17 @@ Get Started Today
 
 </section>
 
+
 <footer>
 
-© 2026 Nivarani AI
+© 2026 DocuSmart
 
 <br><br>
 
-Built with ❤️ using Artificial Intelligence
+Built for smarter document workflows.
 
 </footer>
 
 </body>
 </html>
+```
